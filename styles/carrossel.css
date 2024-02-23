@@ -1,0 +1,234 @@
+.carrossel {
+  & .titulo-carrossel {
+    color: var(--laranja);
+    background-color: var(--branco);
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 2rem 0 1rem 0;
+  }
+
+  & .swiper {
+    & .swiper-pagination {
+      position: initial;
+      margin: 0.5em 0;
+    }
+
+    & .swiper-wrapper {
+      & .swiper-slide {
+        & img {
+          width: 100%;
+        }
+      }
+    }
+
+    & .swiper-button-prev,
+    .swiper-button-next {
+      display: none;
+    }
+  }
+
+  & .card {
+    background-color: var(--branco);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 1rem;
+    margin: 1rem 2rem 2rem 2rem;
+    padding: 2rem 1rem;
+
+    & .description-card {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      grid-template-areas:
+        "text img"
+        "text img";
+      gap: 2rem;
+
+      & .description {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        grid-area: "text";
+
+        & span {
+          text-indent: -9999px;
+          width: 12rem;
+          background-image: url(/assets/img/Star.svg);
+          overflow: hidden;
+        }
+
+        & .title-description {
+          color: var(--laranja);
+          font-weight: 700;
+        }
+
+        & .title-book {
+          color: #002f52;
+          font-weight: 700;
+        }
+
+        & .icons-description {
+          display: flex;
+          align-items: flex-end;
+          gap: 2rem;
+          padding-left: 1rem;
+
+          & img {
+            cursor: pointer;
+            width: 2.5rem;
+          }
+
+          & img:last-child {
+            width: 2rem;
+          }
+        }
+      }
+
+      & .img-card {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        grid-area: "img";
+
+        & button {
+          font-weight: 700;
+          color: var(--branco);
+          background-color: var(--laranja);
+          align-self: center;
+          border: none;
+          padding: 1.5rem 4rem;
+          cursor: pointer;
+        }
+
+        & .img {
+          width: 100%;
+          height: 17rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .carrossel {
+
+    & div{
+        padding-top: 1rem;
+    }
+
+    & .titulo-carrossel {
+      font-size: 2.3rem;
+      padding: 3rem 0 1rem 0;
+    }
+
+    & .swiper {
+      width: 80%;
+      position: relative;
+
+      & .swiper-pagination {
+            top: 32rem;
+            left: 3.4rem;
+            position: absolute;
+      }
+
+      & .swiper-button-prev{
+        left: -0.1px;
+      }
+
+      & .swiper-button-next{
+        right: -0.1px;
+      }
+
+      & .swiper-button-prev,
+      .swiper-button-next {
+        display: block;
+        top: 55%;
+        background: var(--azul-degrade);
+        color: var(--branco);
+        padding: 0.8rem;
+        border-radius: 15%;
+      }
+    }
+
+    & .description {
+      padding-top: 1.2rem;
+      padding-left: 2rem;
+    }
+
+    & .card {
+      width: 50%;
+      margin: 4rem auto;
+
+      & .img-card {
+        width: 80%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .carrossel {
+
+    & .titulo-carrossel{
+        padding: 3rem 0;
+    }
+
+    & div {
+      display: flex;
+      align-items: center;
+
+      & .swiper {
+        width: 30%;
+        position: relative;
+
+        & .swiper-pagination {
+          top: 23rem;
+          left: 26.7rem;
+          position: absolute;
+        }
+
+        & .swiper-button-prev,
+        .swiper-button-next {
+          display: block;
+          top: 55%;
+        }
+      }
+
+      & .card {
+        width: 30%;
+        margin: 4rem auto;
+
+        & .description-card {
+
+          & .description {
+            padding-top: 1.2rem;
+            padding-left: 2rem;
+
+            & span{
+                margin-right: auto;
+            }
+  
+            & .title-description {
+              font-size: 3rem;
+              margin-right: auto;
+            }
+
+            & .title-book {
+                margin-right: auto;
+                font-size: 2rem;
+            }
+
+            & .icons-description {
+              margin-right: auto;
+            }
+          }
+
+          & .img-card {
+            width: 70%;
+            margin-left: auto;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+.banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+    padding: 2.5em 2em;
+    background: var(--azul-degrade);
+    color: var(--branco);
+
+    & .cont-ban{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        & .titulo-ban{
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        & .text-ban{
+            font-weight: 500;
+        }
+
+    }
+
+    & .pesquisa-ban{
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+        background-color: transparent;
+        border-radius: 3rem;
+        border: 1px solid white;
+        color: var(--branco);
+
+        &::placeholder{
+            color: var(--branco);
+            font-size: 1.4rem;
+            font-family: "Poppins",sans-serif;
+            font-weight: 400;
+            background: url(../assets/img/Vector.svg) no-repeat;
+            background-position-y: 0.16em;
+            background-position-x: 2em;
+            padding-left: 1.6rem;
+        }
+    }
+
+}
+
+@media screen and (min-width: 1024px){
+    .banner{
+        padding: 6em 2em;
+        gap: 4rem;
+
+        & .cont-ban{
+
+            & .titulo-ban{
+                font-size: 3rem;
+                font-weight: 700;
+            }
+    
+            & .text-ban{
+                font-weight: 400;
+            }
+        }
+
+        & .pesquisa-ban{
+            width: 50%;
+            padding: 1.5rem 0;
+
+            &::placeholder{
+                background-position-x: 7em;
+                padding-top: 0.1rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1728px){
+    .banner{
+
+        & .pesquisa-ban{
+            width: 30%;
+        }
+    }
+}
