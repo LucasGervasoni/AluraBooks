@@ -111,9 +111,8 @@
 
 @media screen and (min-width: 1024px) {
   .carrossel {
-
-    & div{
-        padding-top: 1rem;
+    & div {
+      padding-top: 1rem;
     }
 
     & .titulo-carrossel {
@@ -126,27 +125,9 @@
       position: relative;
 
       & .swiper-pagination {
-            top: 32rem;
-            left: 3.4rem;
-            position: absolute;
-      }
-
-      & .swiper-button-prev{
-        left: -0.1px;
-      }
-
-      & .swiper-button-next{
-        right: -0.1px;
-      }
-
-      & .swiper-button-prev,
-      .swiper-button-next {
-        display: block;
-        top: 55%;
-        background: var(--azul-degrade);
-        color: var(--branco);
-        padding: 0.8rem;
-        border-radius: 15%;
+        top: 32rem;
+        left: 3.4rem;
+        position: absolute;
       }
     }
 
@@ -168,9 +149,8 @@
 
 @media screen and (min-width: 1728px) {
   .carrossel {
-
-    & .titulo-carrossel{
-        padding: 3rem 0;
+    & .titulo-carrossel {
+      padding: 3rem 0;
     }
 
     & div {
@@ -187,11 +167,6 @@
           position: absolute;
         }
 
-        & .swiper-button-prev,
-        .swiper-button-next {
-          display: block;
-          top: 55%;
-        }
       }
 
       & .card {
@@ -199,23 +174,22 @@
         margin: 4rem auto;
 
         & .description-card {
-
           & .description {
             padding-top: 1.2rem;
             padding-left: 2rem;
 
-            & span{
-                margin-right: auto;
+            & span {
+              margin-right: auto;
             }
-  
+
             & .title-description {
               font-size: 3rem;
               margin-right: auto;
             }
 
             & .title-book {
-                margin-right: auto;
-                font-size: 2rem;
+              margin-right: auto;
+              font-size: 2rem;
             }
 
             & .icons-description {
